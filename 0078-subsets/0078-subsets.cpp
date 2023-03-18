@@ -1,9 +1,9 @@
 class Solution {
 public:
     
-     void solve(vector<int> &jums, vector<int>output, vector<vector<int>> &ans, int index ){
+     void solve(vector<int> nums, vector<int>output, vector<vector<int>> &ans, int index ){
          
-         if(index>=jums.size()){
+         if(index>=nums.size()){
              
              ans.push_back(output);
              return;
@@ -11,15 +11,15 @@ public:
          
          //exclude
          
-         solve(jums,output,ans,index+1);
+         solve(nums,output,ans,index+1);
          
          
          //include
-         int element  = jums[index];
+         int element  = nums[index];
          
          output.push_back(element);
          
-         solve(jums,output,ans,index+1);
+         solve(nums,output,ans,index+1);
          
          
      }
