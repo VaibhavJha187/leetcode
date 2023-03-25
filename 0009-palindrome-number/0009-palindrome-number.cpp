@@ -1,14 +1,24 @@
 class Solution {
 public:
     bool isPalindrome(int x) {
-        string s = to_string(x);
+       long int ans =0;
+       int  n = x;
+        while(x>0){
+          
+            int digit = x%10;
+            
+            ans = (ans*10) + digit;
         
-        cout<<s;
+            x = x/10;
+        }
         
-        string temp = s ;
+        if(ans == n)
+            return true;
+        if(x == -1)
+            return false;
         
-        reverse(s.begin(), s.end());
-        
-        return temp == s;
+        else{
+            return false;
+        }
     }
 };
