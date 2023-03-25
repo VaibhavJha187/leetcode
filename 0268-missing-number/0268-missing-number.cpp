@@ -61,13 +61,13 @@ public:
     }
         return -1;
     }*/
-        unordered_map<int,int>map1;
-        for(auto i:nums){
-            map1[i]++;
+        set<int>set1;
+        for(int i=0;i<nums.size();i++){
+           set1.insert(nums[i]);
         }
         
         for(int i=0;i<=nums.size();i++){
-            if(map1.find(i)==map1.end()){
+            if(set1.find(i)==set1.end()){
                 return i;
             }
         }
