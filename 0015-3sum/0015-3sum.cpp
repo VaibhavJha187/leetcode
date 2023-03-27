@@ -2,6 +2,7 @@ class Solution {
 public:
     vector<vector<int>> threeSum(vector<int>& nums) {
         sort(nums.begin(), nums.end());
+        
         set<vector<int>>s;
         
         vector<vector<int>>output;
@@ -31,8 +32,10 @@ public:
             }      
         }
         
-        for(auto triplet:s)
-            output.push_back(triplet);        
+        for(auto triplet:s){
+            output.push_back(triplet); 
+        }
+              
             return output;
        
     }
