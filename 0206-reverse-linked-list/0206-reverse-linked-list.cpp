@@ -54,7 +54,7 @@ public:
         return head;
         */
         
-        ListNode* temp=reverse1(head);
+        ListNode* temp = reverse1(head);
         
         return temp;
         
