@@ -19,10 +19,11 @@ public:
         while(curr!= NULL && curr->next != NULL){
             
             if(curr->val == curr->next->val){
-                 ListNode* next_next = curr->next->next;
-                ListNode* next = curr->next;
-                delete(next);
-                curr->next = next_next;
+               
+                ListNode* temp = curr->next;
+                
+                curr->next = curr->next->next;
+                delete(temp);
                
             }
             else{
