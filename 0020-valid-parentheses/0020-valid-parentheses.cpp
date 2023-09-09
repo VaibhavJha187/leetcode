@@ -11,9 +11,9 @@ public:
             st.push(ch);
         }
           else{
-              char curr = ch;
+              
               if(!st.empty()){
-                  if((curr== '}' and st.top() == '{') || (curr == ')' and st.top()== '(') || (curr==']' and st.top()=='[')){
+                  if((ch== '}' and st.top() == '{') || (ch == ')' and st.top()== '(') || (ch==']' and st.top()=='[')){
                       st.pop();
                   }
                   else{
